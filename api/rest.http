@@ -1,0 +1,38 @@
+# Create
+POST http://localhost:3000/articles
+Content-Type: application/json
+
+{
+  "title": "mon titre 2",
+  "content": "Le contenu 2"
+}
+
+###
+
+# Index
+GET http://localhost:3000/articles
+Content-Type: application/json
+
+###
+
+# Update
+PUT http://localhost:3000/articles/614dce288da0ce0082f65aa3
+Content-Type: application/json
+
+{
+  "title": "Mon nouveau titre"
+}
+
+###
+
+# Destroy
+DELETE http://localhost:3000/articles/614dce288da0ce0082f65aa3
+Content-Type: application/json
+
+###
+
+# Show
+GET http://localhost:3000/articles/614dce288da0ce0082f65aa3
+Content-Type: application/json
+
+

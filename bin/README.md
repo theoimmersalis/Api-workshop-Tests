@@ -1,0 +1,3 @@
+# bin
+
+Commands directory.

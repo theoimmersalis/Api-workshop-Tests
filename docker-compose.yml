@@ -1,0 +1,33 @@
+version: '3.4'
+
+networks:
+  backend:
+
+services:
+  # DB
+  mongo:
+    image: mongo:3.6
+    ports:
+      - 27017:27017
+    volumes:
+      - ./vc/api/mongo-datadb:/data/db
+    networks:
+      - backend
+
+  # API server
+  api:
+    build:
+      context: .
+      dockerfile: ./Dockerfile-api
+    networks:
+      - backend
+    volumes:
+      - ./api:/usr/app/
+    environment:
+      - MONGO_SERVER=mongo
+    command: bash
+    tty: true
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
