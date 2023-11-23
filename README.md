@@ -1,8 +1,5 @@
 # Node API (Workshop)
 
-> This repo is a material for my courses I teach around Node.js.
-> Only my students are allowed to use it as part of their learning.
-
 ## Usage
 
 Start the stack (host / terminal: 1):
